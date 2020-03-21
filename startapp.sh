@@ -1,2 +1,2 @@
 #!/bin/sh
-exec env HOME=/home/mediaelch/ /usr/bin/mediaelch
+exec env HOME=/home/mediaelch /usr/bin/MediaElch

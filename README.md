@@ -25,8 +25,8 @@ Run the container:
 ## Volumen
 All files in the container or application are configured to be saved in the path /home/mediaelch/.config/kvibes
 
-To make the files accessible from inside the container, you can create another volume with the files to be process persistently. For example `-v /movies=/config/home/Movies`
+To make the files accessible from inside the container, you can create another volume with the files to be process persistently. For example `-v /movies=/home/mediaelch/Movies`
 
 ### Example RUN
 
-docker run -e USER_ID=1000 -e GROUP_ID=1000 -e TAKE_CONFIG_OWNERSHIP=1 -e CLEAN_TMP_DIR=1 -e SECURE_CONNECTION=1 -p 5800:5800 -v ./config=/home/mediaelch/.config/kvibes -v /movies=/config/home/Movies elgranloky/mediaelch
+docker run -e USER_ID=1000 -e GROUP_ID=1000 -e TAKE_CONFIG_OWNERSHIP=1 -e CLEAN_TMP_DIR=1 -e SECURE_CONNECTION=1 -p 5800:5800 -v ./config=/home/mediaelch/.config/kvibes -v /movies=/home/mediaelch/Movies elgranloky/mediaelch
