@@ -1,2 +1,2 @@
 #!/bin/sh
-exec env HOME=/config/home /usr/bin/picard
+exec env HOME=/home/mediaelch/ /usr/bin/mediaelch
