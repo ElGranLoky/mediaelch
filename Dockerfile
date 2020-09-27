@@ -8,7 +8,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     add-apt-repository ppa:mediaelch/mediaelch-stable
 
-# Install musicbrainz
+# Install mediaelch
 RUN apt-get update && \
     apt-get -y --no-install-recommends install mediaelch && \
     rm -rf /var/lib/apt/lists/*
