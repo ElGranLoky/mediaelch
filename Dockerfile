@@ -2,7 +2,7 @@ FROM jlesage/baseimage-gui:ubuntu-18.04
 
 LABEL maintainer="carvajal.diego@gmail.com"
 
-# Update and Add musicbrainz Repo
+# Update and Add mediaelch Repo
 RUN apt-get update && \
     apt-get -y --no-install-recommends install software-properties-common && \
     rm -rf /var/lib/apt/lists/* && \
