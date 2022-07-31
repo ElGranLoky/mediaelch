@@ -1,4 +1,4 @@
-FROM jlesage/baseimage-gui:ubuntu-18.04
+FROM jlesage/baseimage-gui:ubuntu-20.04-v4.0.0-pre.6
 
 LABEL maintainer="carvajal.diego@gmail.com"
 
