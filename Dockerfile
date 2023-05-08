@@ -1,10 +1,10 @@
-FROM jlesage/baseimage-gui:ubuntu-20.04-v4.0.0-pre.6
+FROM jlesage/baseimage-gui:ubuntu-20.04-v3
 
 LABEL maintainer="carvajal.diego@gmail.com"
 
 # Update and Add mediaelch Repo
 RUN apt-get update && \
-    apt-get -y --no-install-recommends install software-properties-common && \
+    apt-get -y --no-install-recommends install software-properties-common binutils && \
     rm -rf /var/lib/apt/lists/* && \
     add-apt-repository ppa:mediaelch/mediaelch-stable
 
@@ -20,6 +20,9 @@ RUN apt-get update && \
     locale-gen en_US.UTF-8 && \
     locale-gen es_ES.UTF-8 && \
     rm -rf /var/lib/apt/lists/*
+
+# FIX libQt5Core.so.5 in docker 
+RUN strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 # Define Run
 ENV APP_NAME="mediaelch"
