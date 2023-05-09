@@ -20,7 +20,7 @@ Run the container:
 |`-e VNC_PASSWORD=password`|Password needed to connect to the application's GUI.|As you wish
 |`-p 5800:5800`| Port HTTP|5800
 |`-p 5900:5900`| Port VNC|5900
-|`-v ${VOLUME_CONFIG}=/home/mediaelch/.config/kvibes`| Path to keep config app in a volumen| ./
+|`-v ${VOLUME_CONFIG}=/config`| Path to keep config app in a volumen| ./
 
 ## Volumen
 All files in the container or application are configured to be saved in the path /home/mediaelch/.config/kvibes
@@ -29,4 +29,4 @@ To make the files accessible from inside the container, you can create another v
 
 ### Example RUN
 
-docker run -e USER_ID=1000 -e GROUP_ID=1000 -e TAKE_CONFIG_OWNERSHIP=1 -e CLEAN_TMP_DIR=1 -e SECURE_CONNECTION=1 -p 5800:5800 -v ./config=/home/mediaelch/.config/kvibes -v /movies=/home/mediaelch/Movies elgranloky/mediaelch
+docker run -e USER_ID=1000 -e GROUP_ID=1000 -e TAKE_CONFIG_OWNERSHIP=1 -e CLEAN_TMP_DIR=1 -e SECURE_CONNECTION=1 -p 5800:5800 -v ./config=/config -v /movies=/home/mediaelch/Movies elgranloky/mediaelch
