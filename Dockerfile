@@ -1,10 +1,10 @@
-FROM jlesage/baseimage-gui:ubuntu-20.04-v4
+FROM jlesage/baseimage-gui:ubuntu-22.04-v4
 
 LABEL maintainer="carvajal.diego@gmail.com"
 
 # Update and Add mediaelch Repo
 RUN apt-get update && \
-    apt-get -y --no-install-recommends install software-properties-common binutils && \
+    apt-get -y --no-install-recommends install software-properties-common gpg-agent binutils && \
     rm -rf /var/lib/apt/lists/* && \
     add-apt-repository ppa:mediaelch/mediaelch-stable
 

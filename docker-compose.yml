@@ -12,7 +12,7 @@ services:
       - 'SECURE_CONNECTION=${SECURE_CONNECTION}'
       - 'VNC_PASSWORD=${VNC_PASSWORD}'
     volumes:
-      - '${VOLUME_CONFIG}:/home/mediaelch/.config/kvibes'
+      - '${VOLUME_CONFIG}:/config'
     ports:
       - '5800:5800'
       - '5900:5900'
