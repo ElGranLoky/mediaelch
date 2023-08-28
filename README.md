@@ -18,7 +18,7 @@ Run the container:
 |`-e CLEAN_TMP_DIR=1`|When set to 1, all files in the /tmp directory are delete during the container startup.|1
 |`-e SECURE_CONNECTION=1`|When set to 1, an encrypted connection is used to access the application's GUI (either via web browser or VNC client).|1
 |`-e VNC_PASSWORD=password`|Password needed to connect to the application's GUI.|As you wish
-|`.e LANG=en_US.UTF-8|Change Language GUI is displayed [[Available locales](https://docs.oracle.com/cd/E23824_01/html/E26033/glset.html)] |As you wish
+|`-e LANG=en_US.UTF-8`|Change Language GUI is displayed [[Available locales](https://docs.oracle.com/cd/E23824_01/html/E26033/glset.html)] |As you wish
 |`-p 5800:5800`| Port HTTP|5800
 |`-p 5900:5900`| Port VNC|5900
 |`-v ${VOLUME_CONFIG}=/config`| Path to keep config app in a volumen| ./
