@@ -24,6 +24,10 @@ RUN apt-get update && \
 # FIX libQt5Core.so.5 in docker 
 RUN strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
+# FIX issue 2
+
+RUN sed -i '/messagebus/d' /var/lib/dpkg/statoverride
+
 # Define Run
 ENV APP_NAME="mediaelch"
 COPY startapp.sh /startapp.sh
